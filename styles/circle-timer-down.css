@@ -1,0 +1,44 @@
+.timer {
+  position: relative;
+  display: inline-block; }
+  .timer svg {
+    position: absolute;
+    left: 0;
+    top: 0; }
+
+.chart {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  width: 120px;
+  height: 120px;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .chart p {
+    text-align: center;
+    padding-top: 25px; }
+  .chart span {
+    display: block;
+    font-size: 2.5em;
+    font-weight: normal; }
+
+svg {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+
+.circle_animation {
+  stroke-dasharray: 314;
+  /* this value is the pixel circumference of the circle */
+  stroke-dashoffset: 314;
+  /*transition: all 1s linear;*/
+  stroke: #e7f7f5;
+  stroke-width: 6; }
+
+.circle_main {
+  stroke-dasharray: 314;
+  /* this value is the pixel circumference of the circle */
+  stroke-dashoffset: 0;
+  stroke: #84d5ce;
+  stroke-width: 6; }

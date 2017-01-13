@@ -1,0 +1,26 @@
+{
+  "name": "circle-timer-down",
+  "version": "0.0.1",
+  "author": "Alexey Nikiforov",
+  "description": "Best circle timer down for sites",
+  "license": "MIT",
+  "keywords": [
+    "timer",
+    "timer down",
+    "circle timer"
+  ],
+
+  "name": "circle-timer",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp-sass": "^2.3.2",
+    "sass": "^0.5.0",
+    "node-sass": "^3.4.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-clean-css": "^2.3.2"
+  }
+}
