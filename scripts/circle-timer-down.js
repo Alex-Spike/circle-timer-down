@@ -110,9 +110,9 @@
     }
 
     CircleTimerDown.prototype.checkTime = function () {
-        const HOURS = 24;
-        const MINUTES = 60;
-        const SECONDS = 60;
+        var HOURS = 24;
+        var MINUTES = 60;
+        var SECONDS = 60;
 
         var initialOffset = 314;
         var days = this.offset.daysAll; //not must be null
@@ -121,16 +121,26 @@
         var iMinutes = MINUTES - this.offset.minutes;
         var iSeconds = SECONDS - this.offset.seconds;
 
-        this.runTimer = function () {
-            document.querySelector('#days span').innerHTML = this.offset.days + '';
-            document.querySelector('#hours span').innerHTML = this.offset.hours + '';
-            document.querySelector('#minutes span').innerHTML = this.offset.minutes + '';
-            document.querySelector('#seconds span').innerHTML = this.offset.seconds + '';
+        var daysSpan = document.querySelector('#days span');
+        var hoursSpan = document.querySelector('#hours span');
+        var minutesSpan = document.querySelector('#minutes span');
+        var secondsSpan = document.querySelector('#seconds span');
 
-            document.querySelector('#days .circle_animation').style.strokeDashoffset = initialOffset - (iDays * (initialOffset / days));
-            document.querySelector('#hours .circle_animation').style.strokeDashoffset = initialOffset - (iHours * (initialOffset / HOURS));
-            document.querySelector('#minutes .circle_animation').style.strokeDashoffset = initialOffset - (iMinutes * (initialOffset / MINUTES));
-            document.querySelector('#seconds .circle_animation').style.strokeDashoffset = initialOffset - (iSeconds * (initialOffset / SECONDS));
+        var daysCircle = document.querySelector('#days .circle_animation');
+        var hoursCircle = document.querySelector('#hours .circle_animation');
+        var minutesCircle = document.querySelector('#minutes .circle_animation');
+        var secondsCircle = document.querySelector('#seconds .circle_animation');
+
+        this.runTimer = function () {
+            daysSpan.innerHTML = this.offset.days + '';
+            hoursSpan.innerHTML = this.offset.hours + '';
+            minutesSpan.innerHTML = this.offset.minutes + '';
+            secondsSpan.innerHTML = this.offset.seconds + '';
+
+            daysCircle.style.strokeDashoffset = initialOffset - (iDays * (initialOffset / days));
+            hoursCircle.style.strokeDashoffset = initialOffset - (iHours * (initialOffset / HOURS));
+            minutesCircle.style.strokeDashoffset = initialOffset - (iMinutes * (initialOffset / MINUTES));
+            secondsCircle.style.strokeDashoffset = initialOffset - (iSeconds * (initialOffset / SECONDS));
 
             if (this.offset.days > 0 && this.offset.hours === 0
                 && this.offset.minutes === 0 && this.offset.seconds === 0) {
