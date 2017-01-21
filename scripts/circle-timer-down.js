@@ -39,7 +39,7 @@
             startDate: '2017/01/01 00:00:00',
             nowDate: new Date().dateParsing(),
             endDate: '2018/01/01 00:00:00',
-            labelDay: 'Day',
+            labelDay: 'Days',
             labelHours: 'Hours',
             labelMinutes: 'Minutes',
             labelSeconds: 'Seconds'
