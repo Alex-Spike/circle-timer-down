@@ -35,10 +35,11 @@
 
 
     function CircleTimerDown(options) {
+        var date = new Date();
         var defaultOptions = {
-            startDate: '2017/01/01 00:00:00',
-            nowDate: new Date().dateParsing(),
-            endDate: '2018/01/01 00:00:00',
+            startDate: date.dateParsing(),
+            nowDate: date.dateParsing(),
+            endDate: date.setDate(date.getDate() + 5),
             labelDay: 'Days',
             labelHours: 'Hours',
             labelMinutes: 'Minutes',
